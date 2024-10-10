@@ -1,26 +1,26 @@
 [
     {
-        "username": "Sebastian",
+        "username": "sebastian",
         "password": "test",
         "id": "1"
     },
     {
-        "username": "Tuva",
+        "username": "tuva",
         "password": "test",
         "id": "2"
     },
     {
-        "username": "Isabel",
+        "username": "isabel",
         "password": "test",
         "id": "3"
     },
     {
-        "username": "Jehad",
+        "username": "jehad",
         "password": "test",
         "id": "4"
     },
     {
-        "username": "Janne",
+        "username": "janne",
         "password": "test",
         "id": "5"
     }
