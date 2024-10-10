@@ -1,4 +1,5 @@
 export function loginPage() {
+    let loginPageDiv = document.getElementById("loginPage");
     let userName = document.getElementById("userName");
     let password = document.getElementById("password");
     let loginBtn = document.getElementById("loginBtn");
@@ -15,7 +16,7 @@ export function loginPage() {
             json.map((user) => {
                 if(userNameValue === user.username && userPasswordValue === user.password) {
                     console.log("Du lyckades logga in!");
-                    
+                    loginPageDiv.style.display = "none";
                 }
             })
         })
