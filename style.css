@@ -1,0 +1,10 @@
+#columns {
+    display: flex;
+}
+#columns div {
+    border: 2px red solid;
+    margin-left: 25px;
+    flex: 1;
+    max-width: 250px;
+    margin-top: 30px;
+}
