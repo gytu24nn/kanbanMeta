@@ -17,18 +17,26 @@
         <button id="loginBtn">Login</button>
     </div>
     <div id="columns">
-        <div id="toDo">
+        
+        <div id="toDo" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h2>To do:</h2>
         </div>
-        <div id="doing">
+
+        <div id="doing" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h2>Doing:</h2>
         </div>
-        <div id="test">
+
+        <div id="test" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h2>Test:</h2>
         </div>
-        <div id="done">
+
+        <div id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h2>Done:</h2>
         </div>
+        
+        <button id="newCardBtn">Lägg till ett nytt kort</button>
+
+        <div id="cards"></div>
     </div>
 </body>
 </html>
