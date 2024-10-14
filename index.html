@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <script type="module" src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="loginPage">
-        <label for="input">Username:</label>
-        <input type="text" id="userName">
-        <label for="input">Password:</label>
-        <input type="password" id="password">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loginPage" class="logIn">
+      <label for="input">Username:</label>
+      <input type="text" id="userName" />
+      <label for="input">Password:</label>
+      <input type="password" id="password" />
 
-        <button id="loginBtn">Login</button>
+      <button id="loginBtn">Login</button>
     </div>
-    <div id="columns">
-        
-        <div id="toDo" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <h2>To do:</h2>
-        </div>
+    <div id="columns" class="columns">
+      <div id="toDo" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>To do</h2>
+      </div>
 
-        <div id="doing" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <h2>Doing:</h2>
-        </div>
+      <div id="doing" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>Doing</h2>
+      </div>
 
-        <div id="test" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <h2>Test:</h2>
-        </div>
+      <div id="test" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>Test</h2>
+      </div>
 
-        <div id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <h2>Done:</h2>
-        </div>
-        
-        <button id="newCardBtn">Lägg till ett nytt kort</button>
+      <div id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>Done</h2>
+      </div>
 
-        <div id="cards"></div>
+      <button id="newCardBtn">Lägg till ett nytt kort</button>
+      <button id="logout">Log Out</button>
+
+      <div id="cards">
+        <input id="input" type="text" placeholder="Enter kort title" />
+      </div>
     </div>
-</body>
+  </body>
 </html>
