@@ -14,7 +14,7 @@ export function DragAndDrop() {
       let addBox = document.createElement("div");
       let boxName = document.createElement("h3");
       boxName.innerText = boxInput.value;
-      Save(boxName.innerText);
+      //Här är det något som ej fungerar gör att drag and drop ej funkar och det skapas ej några kort Save(boxName.innerText);
       addBox.appendChild(boxName);
       boxInput.value = "";
       addBox.className = "kort";
