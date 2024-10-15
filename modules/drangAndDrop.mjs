@@ -1,5 +1,3 @@
-import { Save } from "./localStorag.mjs";
-
 export function DragAndDrop() {
   let newCardBtn = document.getElementById("newCardBtn");
   let cards = document.getElementById("cards");
@@ -14,7 +12,7 @@ export function DragAndDrop() {
       let addBox = document.createElement("div");
       let boxName = document.createElement("h3");
       boxName.innerText = boxInput.value;
-      //Här är det något som ej fungerar gör att drag and drop ej funkar och det skapas ej några kort Save(boxName.innerText);
+
       addBox.appendChild(boxName);
       boxInput.value = "";
       addBox.className = "kort";
