@@ -36,6 +36,7 @@
   text-align: center;
   background: rgb(138, 177, 180);
   color: white;
+  margin-top: auto;
 }
 
 #columns div {
@@ -47,7 +48,7 @@
 }
 
 .kort {
-  width: 220px !important;
+  width: 99% !important;
   height: 100px;
   border: 1px solid black;
 }

@@ -35,8 +35,7 @@ export function DragAndDrop() {
         addBox.remove();
       })
 
-      const randomcolor = Math.floor(Math.random() * 16777215).toString(16);
-      addBox.style.backgroundColor = "#" + randomcolor;
+      addBox.style.backgroundColor = "rgb(0, 81, 84)";
 
       addBox.id = "addedBox" + boxcounter;
 
