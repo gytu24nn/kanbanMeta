@@ -6,6 +6,9 @@ export function loginPage() {
   let columns = document.getElementById("columns");
   let loginFalse = false;
   let WelcomeText = document.getElementById("WelcomeText");
+  let h1 = document.getElementById("h1");
+  
+
 
   loginBtn.addEventListener("click", () => {
     let userNameValue = userName.value.toLowerCase();
@@ -25,11 +28,11 @@ export function loginPage() {
             loginPageDiv.classList.add("logIn-hide");
             columns.classList.add("view-columns");
             loginFalse = true;
-
-            let loginText = document.createElement("h1");
-            loginText.innerText = "Välkommen in, " + user.username; 
+            h1.innerText = `Välkommen in, ${user.username}`; 
             
-            WelcomeText.appendChild(loginText); 
+            WelcomeText.style.display = "block"; 
+            h1.appendChild(loginText);
+
           }
         });
         if (!loginFalse) {
