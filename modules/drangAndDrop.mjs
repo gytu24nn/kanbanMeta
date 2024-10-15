@@ -7,26 +7,34 @@ export function DragAndDrop() {
   boxInput.setAttribute("type", "text");
   boxInput.setAttribute("placeholder", "Enter a card title");
 
-  newCardBtn.addEventListener("click", (e) => {
+  newCardBtn.addEventListener("click", () => {
     if (boxInput.value) {
       let addBox = document.createElement("div");
       let boxName = document.createElement("h3");
       let editBtn = document.createElement("button");
+      let delBtn = document.createElement("button");
 
       boxName.innerText = boxInput.value;
       editBtn.innerText = "save";
+      delBtn.innerText = "Delete";
       let editInput = document.createElement("input");
       editInput.setAttribute("type", "text");
       editInput.setAttribute("placeholder", "Edit card text");
-      addBox.append(boxName, editInput, editBtn);
+      addBox.append(boxName, editInput, editBtn, delBtn);
       boxInput.value = "";
       addBox.className = "kort";
       addBox.draggable = "true";
       addBox.ondragstart = drag;
+
       editBtn.addEventListener("click", () => {
         boxName.innerText = editInput.value;
         editInput.value = "";
       });
+
+      delBtn.addEventListener("click", () => {
+        addBox.remove();
+      })
+
       const randomcolor = Math.floor(Math.random() * 16777215).toString(16);
       addBox.style.backgroundColor = "#" + randomcolor;
 
