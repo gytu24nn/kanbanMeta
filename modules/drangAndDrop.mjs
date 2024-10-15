@@ -7,7 +7,7 @@ export function DragAndDrop() {
   boxInput.setAttribute("type", "text");
   boxInput.setAttribute("placeholder", "Enter a card title");
 
-  newCardBtn.addEventListener("click", (e) => {
+  newCardBtn.addEventListener("click", () => {
     if (boxInput.value) {
       let addBox = document.createElement("div");
       let boxName = document.createElement("h3");
