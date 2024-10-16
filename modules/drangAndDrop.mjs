@@ -21,8 +21,9 @@ export function DragAndDrop() {
       // Save & Delete knapp
       // Rensar fomuläret efter ett kort har lagts till
       boxName.innerText = boxInput.value;
-      editBtn.innerText = "Save";
-      delBtn.innerText = "Delete";
+      editBtn.innerText = "Save changes";
+      delBtn.innerText = "Delete card";
+
       let editInput = document.createElement("input");
       editInput.setAttribute("type", "text");
       editInput.setAttribute("placeholder", "Edit card text");
@@ -48,7 +49,7 @@ export function DragAndDrop() {
       boxcounter++;
       cards.appendChild(addBox);
     } else {
-      alert("write a card title");
+      alert("Ops! It seems you missed to enter a card title in the input-field");
     }
   });
 }
