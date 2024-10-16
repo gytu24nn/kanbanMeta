@@ -13,7 +13,7 @@ export function loginPage() {
   /*Här skapas de en bool med ett false värde som sen kommer användas för att se om användaren är inloggad eller ej!*/
   let loginFalse = false;
 
-/*Här läggs det till en eventlistener på knappen som användaren skrivit in användarnamn och lösenord.*/
+  /*Här läggs det till en eventlistener på knappen som användaren skrivit in användarnamn och lösenord.*/
   loginBtn.addEventListener("click", () => {
     /*Här hämtar koden två vären från inmatningsfälten i HTML och sparar det som skrivits in i de i två variabler.
     Vi lade till tolowercase så att om användaren skriver någon bokstav med stor så blir det ändå rätt. */
@@ -37,11 +37,10 @@ export function loginPage() {
             loginPageDiv.classList.add("logIn-hide");
             columns.classList.add("view-columns");
             loginFalse = true;
-            h1.innerText = `Welcome, ${user.username}`; 
-            
-            WelcomeText.style.display = "block"; 
-            h1.appendChild(loginText);
+            h1.innerText = `Welcome, ${user.username}`.toLocaleUpperCase();
 
+            WelcomeText.style.display = "block";
+            h1.appendChild(loginText);
           }
         });
         /*Om du inte lösenord eller användarnamn stämmer så får användaren upp en alert som informerar 
