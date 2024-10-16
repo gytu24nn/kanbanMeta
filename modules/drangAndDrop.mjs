@@ -1,3 +1,4 @@
+// Exporterar draganddrop funkionen som hanterar kort-skapande och flyttandet av korten
 export function DragAndDrop() {
   let newCardBtn = document.getElementById("newCardBtn");
   let cards = document.getElementById("cards");
@@ -7,6 +8,9 @@ export function DragAndDrop() {
   boxInput.setAttribute("type", "text");
   boxInput.setAttribute("placeholder", "Enter a card title");
 
+  // Implementerar en klick-event på "new card" knappen
+  // Kontrollerar om där är något värde i input rutan
+  // Skapar DOM element för korten
   newCardBtn.addEventListener("click", () => {
     if (boxInput.value) {
       let addBox = document.createElement("div");
@@ -14,8 +18,10 @@ export function DragAndDrop() {
       let editBtn = document.createElement("button");
       let delBtn = document.createElement("button");
 
+      // Save & Delete knapp
+      // Rensar fomuläret efter ett kort har lagts till
       boxName.innerText = boxInput.value;
-      editBtn.innerText = "save";
+      editBtn.innerText = "Save";
       delBtn.innerText = "Delete";
       let editInput = document.createElement("input");
       editInput.setAttribute("type", "text");
@@ -33,7 +39,7 @@ export function DragAndDrop() {
 
       delBtn.addEventListener("click", () => {
         addBox.remove();
-      })
+      });
 
       addBox.style.backgroundColor = "rgb(0, 81, 84)";
 
@@ -47,14 +53,17 @@ export function DragAndDrop() {
   });
 }
 
+// Exportera funktionen för att kort ska kunna släppas
 export function allowDrop(ev) {
   ev.preventDefault();
 }
 
+// Hanterar "drag" eventet
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
 
+// Exporterar "drop" funktionen
 export function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
