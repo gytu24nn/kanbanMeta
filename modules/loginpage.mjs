@@ -28,7 +28,7 @@ export function loginPage() {
             loginPageDiv.classList.add("logIn-hide");
             columns.classList.add("view-columns");
             loginFalse = true;
-            h1.innerText = `Välkommen in, ${user.username}`; 
+            h1.innerText = `Welcome, ${user.username}`; 
             
             WelcomeText.style.display = "block"; 
             h1.appendChild(loginText);
