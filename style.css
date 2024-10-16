@@ -1,3 +1,4 @@
+ /* OVERALL STYLING OF BODY + LOGIN PAGE */
 * {
   background-color: azure;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,25 +8,21 @@
   display: flex;
 }
 
-.logIn-hide {
+.logIn-hide, .columns {
   display: none;
 }
 
 #loginPage input {
   width: 180px;
   height: 20px;
-  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 3px;
-  margin-right: 20px;
-  margin-left: 20px;
   font-size: 16px;
+  margin: 0 20px 20px 20px;
 }
 
-.columns {
-  display: none;
-}
+ /* STYLING THE COLUMNS */
 
 .view-columns {
   display: flex;
@@ -47,46 +44,46 @@
   margin-top: 40px;
 }
 
+ /* STYLING OF CARDS WITHIN COLUMNS */
+
 .kort {
   width: 99% !important;
   height: 100px;
   border: 1px solid black;
 }
 
+.kort h3, .kort input, .kort button {
+  margin-left: 10px;
+}
+
+.kort h3 {
+ background-color:rgb(0, 81, 84);
+ color: white;
+}
+
+.kort input, .kort button  {
+  background-color:rgb(255, 255, 255);
+ }
+
 #input {
   width: 200px;
   height: 30px;
 }
 
-#loginBtn {
+ /* STYLING OF BUTTONS */
+
+#logout, #newCardBtn, #loginBtn {
   height: 30px;
-  width: 100px;
+  width: 180px;
   border-radius: 8px;
   background-color: rgb(138, 177, 180);
   color: white;
   border: none;
+  font-size: 16px;
   cursor: pointer;
-  font-size: 16px;
 }
 
-#newCardBtn {
-  height: 30px;
+#newCardBtn, #logout {
   margin-top: 100px;
-  width: 180px;
-  border-radius: 8px;
-  background-color: rgb(138, 177, 180);
-  color: white;
-  border: none;
-  font-size: 16px;
 }
 
-#logout {
-  height: 30px;
-  margin-top: 100px;
-  width: 180px;
-  border-radius: 8px;
-  background-color: rgb(138, 177, 180);
-  color: white;
-  border: none;
-  font-size: 16px;
-}
