@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--Här skapas en div för login funktionen. I den skapas även alla input och knappar som behövs för den funktionen.-->
     <div id="loginPage" class="logIn">
       <label for="input">Username:</label>
       <input type="text" id="userName" />
@@ -16,9 +17,11 @@
 
       <button id="loginBtn">Login</button>
     </div>
+    <!--En div för en välkomns text som ska skrivas ut i modulen loginpage. Om en ny användare loggar in ändras texten i den.-->
     <div id="WelcomeText" >
       <h1 id="h1"></h1>
     </div>
+    <!--en div för de hård kodade kolumnerna. I den finns de  en div för varje kolumn och en h2 för texten för kolumnen.-->
     <div id="columns" class="columns">
       <div id="toDo" ondrop="drop(event)" ondragover="allowDrop(event)">
         <h2>To do</h2>
@@ -36,10 +39,12 @@
         <h2>Done</h2>
       </div>
 
+      <!--Div med input field för det som ska står på kortet.-->
       <div id="cards">
         <input id="input" type="text" placeholder="Enter kort title" />
       </div>
 
+      <!--Två knappar för logga ut och den andra för att kunna lägga till kort.-->
       <button id="newCardBtn">Lägg till ett nytt kort</button>
       <button id="logout">Log Out</button>
     </div>
